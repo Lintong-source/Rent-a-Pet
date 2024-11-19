@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>PETS</h1>
+  <div class="d-flex row">
+      <% @pets.each do |pet| %>
+      <div class="col-4">
+        <p><%= pet.pet_name %></p>
+        <p><%= pet.pet_details %></p>
+      <img src="<%= pet.picture_url %>" alt="Petpic" width="300px">
+      </div>
+      <% end %>
+  </div>
+<%= link_to "Add a Pet", new_pet_path(@pet) %>
+</div>
