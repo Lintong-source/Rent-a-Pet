@@ -1,7 +1,10 @@
-<%= simple_form_for(@pet) do |f| %>
-  <%= f.input :pet_name %>
-  <%= f.input :pet_details %>
-  <%= f.input :picture_url %>
-  <%= f.submit "Create Pet", class: "btn btn-primary" %>
-<% end %>
-
+<div class="simple-form">
+  <%= simple_form_for(@pet) do |f| %>
+    <div class="input">
+      <%= f.input :pet_name %>
+      <%= f.input :pet_details %>
+      <%= f.input :picture_url %>
+      <p><%= f.submit "Create Pet", class: "btn btn-primary" %></p>
+    </div>
+  <% end %>
+</div>
