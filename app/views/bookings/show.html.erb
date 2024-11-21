@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Your booking has been confirmed!</h1>
+  <h2><%= @pet.pet_name %></h2>
+  <div class="d-flex align-items-center"> <!-- This makes the layout flexible and vertically centered -->
+    <div class="col-6">
+      <img src="<%= @pet.picture_url %>" alt="Petpic" width="500px">
+    </div>
+    <div class="col-6">
+      <p><strong>Booking date</strong></p>
+      <p><strong>From:</strong> <%= @booking.opening_date.strftime("%d-%m-%Y") %></p>
+      <p><strong>Till:</strong> <%= @booking.closing_date.strftime("%d-%m-%Y") %></p>
+    </div>
+  </div>
+</div>

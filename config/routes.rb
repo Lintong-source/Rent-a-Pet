@@ -12,10 +12,11 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :pets do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show]
   end
 
   resources :bookings, only: [:update]
 
   get 'profile/:username', to: "users#profile"
+
 end
