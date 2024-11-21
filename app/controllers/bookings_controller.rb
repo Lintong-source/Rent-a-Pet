@@ -1,6 +1,12 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!, only: :new
 
+  def show
+    @pet = Pet.find(params[:pet_id])
+    @booking = @pet.bookings.find(params[:id])
+
+  end
+
   def new
     @pet = Pet.find(params[:pet_id])
     @booking = Booking.new
@@ -14,7 +20,7 @@ class BookingsController < ApplicationController
 
 
     if @booking.save
-      redirect_to pet_path(@pet), notice: "Yay! You have successfully booked this pet!"
+      redirect_to pet_booking_path(@pet, @booking), notice: "Yay! You have successfully booked this pet!"
     else
       render :new, status: :unprocessable_entity
     end
