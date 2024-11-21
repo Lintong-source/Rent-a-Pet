@@ -3,3 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+import { initFlatpickr } from "./flatpickr";
+
+document.addEventListener("turbo:load", () => {
+  initFlatpickr();
+});
