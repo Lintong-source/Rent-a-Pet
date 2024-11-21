@@ -17,5 +17,5 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:update]
 
-  resources :users, only: [:show]
+  get 'profile', to: 'users#show', as: :user
 end
