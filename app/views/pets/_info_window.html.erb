@@ -1,2 +1,6 @@
-<h2><%= pet.pet_name %></h2>
-<p><%= pet.address %></p>
+<div>
+  <h2>
+    <%= link_to pet.pet_name, pet_path(pet), class: "text-decoration-none link-opacity-75-hover no-outline" %>
+  </h2>
+  <img src="<%= pet.picture_url %>" alt="Petpic" class="center-block img-fluid">
+</div>
