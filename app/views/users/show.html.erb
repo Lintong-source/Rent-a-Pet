@@ -1,0 +1,14 @@
+<div class="container">
+<h1 class="title">My bookings</h1>
+  <div class="d-flex row">
+    <% @bookings.each do |booking| %>
+      <%= booking.pet.pet_name%>
+    <% end %>
+  </div>
+  <h1 class="title">My Pets</h1>
+  <div class="d-flex row">
+    <% @pets.each do |pet| %>
+      <%= pet.pet_name %>
+    <% end %>
+  </div>
+</div>
