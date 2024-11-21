@@ -10,8 +10,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @pets = @user.pets
-    @bookings = @user.bookings
+    @pets = current_user.pets
+    @bookings = current_user.bookings
 
     # @booking = @user.bookings.find(params[:id])
     # @bookings = Booking.where(user_id: params[:id])
