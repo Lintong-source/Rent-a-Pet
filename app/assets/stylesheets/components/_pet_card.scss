@@ -1,0 +1,35 @@
+.pet-card {
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Center content vertically */
+  padding: 20px;                /* Add some padding around the card */
+  border: 1px solid #ccc;       /* Optional: Border for visualization */
+  border-radius: 10px;          /* Optional: Rounded corners */
+  max-width: 600px;             /* Set a max width for the card */
+  margin: 20px auto;            /* Center the card horizontally on the page */
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.pet-card img {
+  flex-shrink: 0;               /* Prevent the image from shrinking */
+  margin-right: 20px;           /* Space between the image and the text */
+  border-radius: 10px;          /* Optional: Rounded corners for the image */
+}
+
+.pet-card div {
+  flex-grow: 1;                 /* Let the text take up remaining space */
+  text-align: left;             /* Align text to the left */
+}
+
+.pet-card h1 {
+  margin: 0 0 10px 0;           /* Remove top margin, add space below */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pet-card p {
+  margin: 5px 0;                /* Add space between paragraphs */
+}
+
+.page-fix {
+  // height: 75vh;
+}

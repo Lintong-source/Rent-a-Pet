@@ -1,7 +1,14 @@
 .simple-form {
-  margin: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .input {
   padding: 50px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
