@@ -19,13 +19,16 @@
         <% if @bookings.present? %>
           <% @bookings.each do |booking| %>
             <div class="col-4">
-              <div class="card-product">
+              <div class="card-product position-relative">
                 <img src="<%= booking.pet.picture_url %>" alt="Petpic" width="300px">
-                <div class="card-product-infos">
+                <div class="card-product-infos ">
                   <h2 class= "pet-name"><%= booking.pet.pet_name %></h2>
                   <p><%= booking.pet.pet_details %></p>
                   <p><strong>From:</strong> <%= booking.opening_date.strftime("%d-%m-%Y") %></p>
                   <p><strong>Till:</strong> <%= booking.closing_date.strftime("%d-%m-%Y") %></p>
+                  <p><%= link_to "cancel", booking_path(booking),
+                    data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
+                    class: "btn btn-warning position-absolute bottom-0 end-0 me-2 mb-2" %></p>
                 </div>
               </div>
             </div>
