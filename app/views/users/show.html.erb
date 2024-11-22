@@ -16,22 +16,31 @@
     <div class="tab-pane active" id="home">
       <h1 class="title">My bookings</h1>
       <div class="d-flex row">
-        <% @bookings.each do |booking| %>
-          <div class="col-4">
-            <div class="card-product">
-              <img src="<%= booking.pet.picture_url %>" alt="Petpic" width="300px">
-              <div class="card-product-infos">
-                <h2 class= "pet-name"><%= booking.pet.pet_name %></h2>
-                <p><%= booking.pet.pet_details %></p>
+        <% if @bookings.present? %>
+          <% @bookings.each do |booking| %>
+            <div class="col-4">
+              <div class="card-product">
+                <img src="<%= booking.pet.picture_url %>" alt="Petpic" width="300px">
+                <div class="card-product-infos">
+                  <h2 class= "pet-name"><%= booking.pet.pet_name %></h2>
+                  <p><%= booking.pet.pet_details %></p>
+                  <p><strong>From:</strong> <%= booking.opening_date.strftime("%d-%m-%Y") %></p>
+                  <p><strong>Till:</strong> <%= booking.closing_date.strftime("%d-%m-%Y") %></p>
+                </div>
               </div>
             </div>
+          <% end %>
+        <% else %>
+          <div class="col-6 alert alert-warning position-static">
+            <%= link_to "Your booking is empty, go ahead and choose your favorite pet!", root_path , class: "alert-link" %>
           </div>
-        <% end %>
+        <%end%>
       </div>
     </div>
     <div class="tab-pane" id="menu1">
       <h1 class="title">My Pets</h1>
       <div class="d-flex row">
+        <% if @pets.present? %>
         <% @pets.each do |pet| %>
           <div class="col-4">
             <%# <%= link_to pet_path(pet), style: "text-decoration: none; color: inherit;" do %>
@@ -42,6 +51,12 @@
                 <p><%= pet.pet_details %></p>
               </div>
             </div>
+          </div>
+        <% end %>
+        <% else %>
+          <div class="col-6 alert alert-warning position-static">
+            <%= link_to "You haven't added your pet yet, go ahead and add one!", new_pet_path(@pet) , class: "alert-link" %>
+              <a href="#" class="alert-link"></a>
           </div>
         <% end %>
       </div>
