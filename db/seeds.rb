@@ -25,4 +25,3 @@ puts('seed a new pet with address')
 #Flat.create(address: "16 Villa Gaudelet, Paris", name: "Le Wagon HQ")
 Pet.create(pet_name:"Ace", pet_details: "Have fun with Ace!", picture_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.atozvet.com%2Fprevention-treatment-pet-disease%2F&psig=AOvVaw3iPhWgbHr3vX7KCvIELP1W&ust=1732184928734000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJiD2u3Z6okDFQAAAAAdAAAAABAE", address: "16 Villa Gaudelet, Paris", user_id: 1)
 puts('done')
-

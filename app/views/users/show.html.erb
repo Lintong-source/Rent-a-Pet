@@ -1,14 +1,50 @@
+
+
 <div class="container">
-<h1 class="title">My bookings</h1>
-  <div class="d-flex row">
-    <% @bookings.each do |booking| %>
-      <%= booking.pet.pet_name%>
-    <% end %>
-  </div>
-  <h1 class="title">My Pets</h1>
-  <div class="d-flex row">
-    <% @pets.each do |pet| %>
-      <%= pet.pet_name %>
-    <% end %>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#home">My bookings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu1">My Pets</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="home">
+      <h1 class="title">My bookings</h1>
+      <div class="d-flex row">
+        <% @bookings.each do |booking| %>
+          <div class="col-4">
+            <div class="card-product">
+              <img src="<%= booking.pet.picture_url %>" alt="Petpic" width="300px">
+              <div class="card-product-infos">
+                <h2 class= "pet-name"><%= booking.pet.pet_name %></h2>
+                <p><%= booking.pet.pet_details %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="tab-pane" id="menu1">
+      <h1 class="title">My Pets</h1>
+      <div class="d-flex row">
+        <% @pets.each do |pet| %>
+          <div class="col-4">
+            <%# <%= link_to pet_path(pet), style: "text-decoration: none; color: inherit;" do %>
+            <div class="card-product">
+              <img src="<%= pet.picture_url %>" alt="Petpic" width="300px">
+              <div class="card-product-infos">
+                <h2 class= "pet-name"><%= pet.pet_name %></h2>
+                <p><%= pet.pet_details %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
