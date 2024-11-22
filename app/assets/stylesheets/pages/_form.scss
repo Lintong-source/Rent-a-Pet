@@ -1,7 +1,22 @@
 .simple-form {
-  margin: 50px;
+//   display: flex;
+
+  width: 50%;        /* Make the form cover half of the screen horizontally */   /* Ensure the form takes full height of the viewport */
+  margin: 0 auto;
 }
 
 .input {
   padding: 50px;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }

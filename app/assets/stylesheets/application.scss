@@ -18,7 +18,7 @@
 body {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
-  min-height: 100vh;
+  min-height: 100vh !important;
   font-family: 'Roboto', sans-serif;
   color:rgb(73, 73, 73);
   background:  linear-gradient(135deg,
@@ -50,5 +50,23 @@ h1, h2 {
 }
 
 p {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.btn-secondary {
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
   font-family: 'Nanum Gothic', sans-serif;
 }

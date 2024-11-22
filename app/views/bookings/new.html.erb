@@ -1,15 +1,18 @@
 <div class="simple-form">
+<h1>When would you like to spend some time with <%= @pet.pet_name %>?</h1>
   <%= simple_form_for([@pet, @booking]) do |f| %>
     <div class="input">
       <%= f.input :opening_date,
             as: :string,
+            label: "From",
             input_html: { data: { controller: "datepicker" } } %>
             <%= f.input :closing_date,
             as: :string,
+            label: "Till",
             input_html: { data: { controller: "datepicker" } } %>
     </div>
     <div class="actions">
-      <%= f.submit "Book", class: "btn btn-primary" %>
+      <%= f.submit "Book", class: "btn btn-secondary" %>
     </div>
   <% end %>
 </div>

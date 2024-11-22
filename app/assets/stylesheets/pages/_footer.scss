@@ -1,14 +1,16 @@
 .footer {
-  position: fixed;
-  bottom: 0;
+  // position: relative;
+  // bottom: 0;
   width: 100%;
-  background: #F4F4F4;
+  background: #EEF7FF;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 30px;
 }
 .footer-links {
   display: flex;
