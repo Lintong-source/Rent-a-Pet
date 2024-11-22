@@ -9,6 +9,7 @@
       <p><strong>Booking date</strong></p>
       <p><strong>From:</strong> <%= @booking.opening_date.strftime("%d-%m-%Y") %></p>
       <p><strong>Till:</strong> <%= @booking.closing_date.strftime("%d-%m-%Y") %></p>
+      <%= link_to "My Paw Agenda", user_path(current_user), class: "btn btn-secondary" %>
     </div>
   </div>
 </div>

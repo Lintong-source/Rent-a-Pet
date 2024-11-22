@@ -4,7 +4,7 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" data-bs-toggle="tab" href="#home">My bookings</a>
+      <a class="nav-link active" data-bs-toggle="tab" href="#home">My Paw Agenda</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="tab" href="#menu1">My Pets</a>
@@ -14,7 +14,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane active" id="home">
-      <h1 class="title">My bookings</h1>
+      <h1 class="title">My Paw Agenda</h1>
       <div class="d-flex row">
         <% if @bookings.present? %>
           <% @bookings.each do |booking| %>
@@ -26,9 +26,9 @@
                   <p><%= booking.pet.pet_details %></p>
                   <p><strong>From:</strong> <%= booking.opening_date.strftime("%d-%m-%Y") %></p>
                   <p><strong>Till:</strong> <%= booking.closing_date.strftime("%d-%m-%Y") %></p>
-                  <p><%= link_to "cancel", booking_path(booking),
+                  <p><%= link_to "Cancel", booking_path(booking),
                     data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
-                    class: "btn btn-warning position-absolute bottom-0 end-0 me-2 mb-2" %></p>
+                    class: "btn btn-secondary position-absolute bottom-0 end-0 me-2 mb-2" %></p>
                 </div>
               </div>
             </div>

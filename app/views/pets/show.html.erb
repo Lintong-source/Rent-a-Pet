@@ -1,10 +1,11 @@
 <div class="page-fix">
+<h1>Cute, right?</h1>
   <div class="pet-card">
   <img src="<%= @pet.picture_url %>" alt="Petpic" width="300px">
     <div>
       <h1><%= @pet.pet_name %></h1>
       <p><%= @pet.pet_details %></p>
-      <p><%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn btn-secondary" %></p>
+      <p><%= link_to "Choose me", new_pet_booking_path(@pet), class: "btn btn-secondary" %></p>
     </div>
   </div>
 </div>

@@ -15,11 +15,16 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: "custom-btn mb-3" %>
+
+
+    </div>
+
+    <%= render "devise/shared/links" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+
 <% end %>
-
-<%= render "devise/shared/links" %>
