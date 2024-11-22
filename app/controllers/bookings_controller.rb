@@ -17,8 +17,6 @@ class BookingsController < ApplicationController
     @booking = @pet.bookings.create(booking_params)
     @booking.user = current_user
 
-
-
     if @booking.save
       redirect_to pet_booking_path(@pet, @booking), notice: "Yay! You have successfully booked this pet!"
     else
